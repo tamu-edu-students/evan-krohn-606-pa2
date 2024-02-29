@@ -4,15 +4,27 @@
 
 <table>
   <thead>
-    <th>Title
+    <th <% if params[:sort] == "title" %>
+          style="background-color:gray;"
+        <% end %>
+        >
+        Title
       <a href="?sort=title">↑</a>
       <a href="?sort=title&reverse=true">↓</a>
     </th>
-    <th>Rating
+    <th
+    <% if params[:sort] == "rating" %>
+          style="background-color:gray;"
+        <% end %>
+    >Rating
       <a href="?sort=rating">↑</a>
       <a href="?sort=rating&reverse=true">↓</a>
     </th>
-    <th>Release date
+    <th
+    <% if params[:sort] == "release_date" %>
+          style="background-color:gray;"
+        <% end %>
+    >Release date
       <a href="?sort=release_date">↑</a>
       <a href="?sort=release_date&reverse=true">↓</a>
     </th>
